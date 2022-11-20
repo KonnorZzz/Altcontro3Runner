@@ -8,6 +8,7 @@ TagManager:
   - Fire
   - Water
   - Grass
+  - GrassLand
   layers:
   - Default
   - TransparentFX
