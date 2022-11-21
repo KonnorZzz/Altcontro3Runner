@@ -9,8 +9,9 @@ TagManager:
   - Water
   - Grass
   - GrassLand
-  - UltTigger
   - UltTrigger
+  - ToTutorial
+  - ToStart
   layers:
   - Default
   - TransparentFX

@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Turtorial.unity
     guid: ceeef5f347b10844f900c423c790fd7d
   - enabled: 1
-    path: Assets/Scenes/End.unity
-    guid: e9308cb56a4dba842a748963182d2d09
-  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 1d62d4ba95e844340b490c4c0bbd0d39
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: e9308cb56a4dba842a748963182d2d09
   m_configObjects: {}
