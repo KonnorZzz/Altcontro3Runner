@@ -8,6 +8,9 @@ public class Score : MonoBehaviour
     public int score = 0;
     [SerializeField] TextMeshProUGUI sc;
 
+    public TextMeshProUGUI PlayerName;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +21,6 @@ public class Score : MonoBehaviour
     void FixedUpdate()
     {
         sc.text = "Score:" + score.ToString("0");
+        
     }
 }
