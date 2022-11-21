@@ -10,7 +10,7 @@ public class BacktoMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("Backto", 4f);
+        //Invoke("Backto", 4f);
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class BacktoMenu : MonoBehaviour
         
     }
 
-    void Backto()
+    public void Backto()
     {
         SceneManager.LoadScene(0);
     }

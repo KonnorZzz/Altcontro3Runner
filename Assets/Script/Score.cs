@@ -7,7 +7,8 @@ public class Score : MonoBehaviour
 {
     public int score = 0;
     [SerializeField] TextMeshProUGUI sc;
-
+    public static Score scene3;
+    public int PlayerScore;
     public TextMeshProUGUI PlayerName;
 
 
@@ -23,6 +24,7 @@ public class Score : MonoBehaviour
     void FixedUpdate()
     {
         sc.text = "Score:" + score.ToString("0");
+       
         
     }
 }

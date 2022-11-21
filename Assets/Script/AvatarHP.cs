@@ -34,15 +34,12 @@ public class AvatarHP : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-        }
-        
-        if(health == 0)
-        {
             SceneManager.LoadScene(3);
             GameOver.SetActive(true);
             scoreforFinal.score = FinalScore;
-           
         }
+        
+       
 
     }
 
