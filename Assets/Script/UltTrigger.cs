@@ -47,9 +47,9 @@ public class UltTrigger : MonoBehaviour
     {
         ultBar.text = ult.ToString("0") + "%";
 
-        if (ult >= 50)
+        if (ult >= 70)
         {
-            ult = 50;
+            ult = 70;
 
         }
 
@@ -62,7 +62,7 @@ public class UltTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("UltTrigger") && ult == 50 && ultult == true)
+        if (other.CompareTag("UltTrigger") && ult == 70 && ultult == true)
         {
             
             Ulthand1.SetActive(true);
