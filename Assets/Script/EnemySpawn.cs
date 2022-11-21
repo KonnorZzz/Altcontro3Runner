@@ -24,6 +24,8 @@ public class EnemySpawn : MonoBehaviour
 
     public List<GameObject> Enemy2;
 
+    public float speedtime;
+
 
     //[SerializeField]
     public float enemyIntervalMax = 0.5f;
@@ -35,6 +37,8 @@ public class EnemySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speedtime = 0;
+
         Enemy[0] = Enemy11;
         Enemy[1] = Enemy22;
         Enemy[2] = Enemy33;
@@ -49,6 +53,70 @@ public class EnemySpawn : MonoBehaviour
         Invoke("Start2", 2f);
 
         
+    }
+
+    private void Update()
+    {
+        speedtime += 1 * Time.deltaTime;
+
+        if(speedtime <= 15)
+        {
+            enemyIntervalMax = 4f;
+            enemyIntervalMin = 3.6f;
+
+            enemyIntervalMax1 = 4f;
+            enemyIntervalMin1 = 3.6f;
+        }
+
+        if (speedtime >= 15 && speedtime <= 35)
+        {
+            enemyIntervalMax = 3.5f;
+            enemyIntervalMin = 3f;
+
+            enemyIntervalMax1 = 3.5f;
+            enemyIntervalMin1 = 3f;
+        }
+
+        if (speedtime >= 35 && speedtime <= 55)
+        {
+            enemyIntervalMax = 2f;
+            enemyIntervalMin = 2f;
+
+            enemyIntervalMax1 = 2f;
+            enemyIntervalMin1 = 2f;
+
+        }
+
+        if (speedtime >= 55 && speedtime <= 70)
+        {
+            enemyIntervalMax = 1.1f;
+            enemyIntervalMin = 1f;
+
+            enemyIntervalMax1 = 1.1f;
+            enemyIntervalMin1= 1f;
+
+        }
+
+        if (speedtime >= 70 && speedtime <= 100) 
+        {
+            enemyIntervalMax = 0.5f;
+            enemyIntervalMin = 0.5f;
+
+            enemyIntervalMax1 = 0.6f;
+            enemyIntervalMin1 = 0.5f;
+
+        }
+
+
+        if (speedtime >= 100)
+        {
+            enemyIntervalMax = 0.1f;
+            enemyIntervalMin = 0.1f;
+
+            enemyIntervalMax1 = 0.1f;
+            enemyIntervalMin1 = 0.1f;
+
+        }
     }
 
     void Start2()
