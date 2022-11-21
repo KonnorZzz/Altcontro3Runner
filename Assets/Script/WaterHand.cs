@@ -7,6 +7,8 @@ public class WaterHand : MonoBehaviour
     Score score;
     UltTrigger ultTrigger;
 
+    AudioSource audiosource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class WaterHand : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
+            GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             score.score += 1;
             ultTrigger.ult += 1;

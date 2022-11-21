@@ -15,7 +15,7 @@ public class EnemyMove : MonoBehaviour
     {
 
         enemySpawn = GameObject.Find("EnemySpawner").GetComponent<EnemySpawn>();
-        enemySpawn = GameObject.Find("EnemySpawner1").GetComponent<EnemySpawn>();
+
 
 
         speedtime = 0;

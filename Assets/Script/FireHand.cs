@@ -8,6 +8,8 @@ public class FireHand : MonoBehaviour
     Score score;
     UltTrigger ultTrigger;
 
+    AudioSource audiosource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class FireHand : MonoBehaviour
     {
         if(other.CompareTag("Fire"))
         {
+            GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             score.score += 1;
             ultTrigger.ult += 1;

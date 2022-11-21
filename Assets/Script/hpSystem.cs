@@ -7,8 +7,10 @@ public class hpSystem : MonoBehaviour
     AvatarHP avhp;
 
     public bool isUlt;
-    
-    
+
+    AudioSource audiosource;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,16 +29,19 @@ public class hpSystem : MonoBehaviour
         if(other.CompareTag("Fire")&& isUlt == false)
         {
             avhp.health -= 1;
+            GetComponent<AudioSource>().Play();
         }
 
         if (other.CompareTag("Water")&&isUlt == false)
         {
             avhp.health -= 1;
+            GetComponent<AudioSource>().Play();
         }
 
         if (other.CompareTag("Grass")&& isUlt == false)
         {
             avhp.health -= 1;
+            GetComponent<AudioSource>().Play();
         }
     }
 }
