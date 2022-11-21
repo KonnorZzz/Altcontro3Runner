@@ -11,6 +11,9 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField]
     private GameObject Enemy33;
 
+    public float x1;
+    public float x2;
+
     public List<GameObject> Enemy;
 
     //[SerializeField]
@@ -34,7 +37,7 @@ public class EnemySpawn : MonoBehaviour
     {
         enemy = Enemy[Random.Range(0, 3)];
         yield return new WaitForSeconds(intervel);
-        GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(0.1f, 0.4f), Random.Range(3, 3)), Quaternion.identity);
+        GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(x1, x2), Random.Range(0.15f, 0.4f), Random.Range(3, 3)), Quaternion.identity);
         StartCoroutine(spawnEnemy(intervel, enemy));
     }
 }
