@@ -53,7 +53,7 @@ public class UltTrigger : MonoBehaviour
 
         }
 
-        if(ult == 50)
+        if(ult == 70)
         {
             ultReadyUI.SetActive(true);
         }

@@ -70,5 +70,9 @@ public class ChangingHands : MonoBehaviour
         grassHandRight.SetActive(false);
         fireHandRight.SetActive(false);
         waterHandRight.SetActive(true);
+
+        
     }
+
+  
 }
