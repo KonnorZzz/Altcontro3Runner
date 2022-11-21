@@ -37,5 +37,11 @@ public class StartSceneTrigger : MonoBehaviour
 
             SceneManager.LoadScene(0);
         }
+
+        if (other.CompareTag("t1"))
+        {
+
+            
+        }
     }
 }

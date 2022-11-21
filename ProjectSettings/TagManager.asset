@@ -13,6 +13,7 @@ TagManager:
   - ToTutorial
   - ToStart
   - ToMenu
+  - t1
   layers:
   - Default
   - TransparentFX
