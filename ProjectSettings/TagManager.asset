@@ -12,6 +12,7 @@ TagManager:
   - UltTrigger
   - ToTutorial
   - ToStart
+  - ToMenu
   layers:
   - Default
   - TransparentFX

@@ -31,5 +31,11 @@ public class StartSceneTrigger : MonoBehaviour
    
             SceneManager.LoadScene(2);
         }
+
+        if (other.CompareTag("ToMenu"))
+        {
+
+            SceneManager.LoadScene(0);
+        }
     }
 }
