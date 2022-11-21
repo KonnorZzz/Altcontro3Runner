@@ -9,12 +9,14 @@ public class Score : MonoBehaviour
     [SerializeField] TextMeshProUGUI sc;
 
     public TextMeshProUGUI PlayerName;
+
+
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

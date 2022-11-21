@@ -9,6 +9,8 @@ TagManager:
   - Water
   - Grass
   - GrassLand
+  - UltTigger
+  - UltTrigger
   layers:
   - Default
   - TransparentFX

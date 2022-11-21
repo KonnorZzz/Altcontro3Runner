@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawnerSpawn : MonoBehaviour
-{    public GameObject spawner2;
+{
+    
+    
+    public GameObject spawner2;
     
     void Start()
     {

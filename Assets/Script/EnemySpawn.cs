@@ -16,6 +16,7 @@ public class EnemySpawn : MonoBehaviour
 
     public List<GameObject> Enemy;
 
+
     //[SerializeField]
     public float enemyIntervalMax = 0.5f;
     public float enemyIntervalMin = 0.1f; 
@@ -30,6 +31,8 @@ public class EnemySpawn : MonoBehaviour
 
         StartCoroutine(spawnEnemy(Random.Range(enemyIntervalMin, enemyIntervalMax), Enemy11));
     }
+
+  
 
     // Update is called once per frame
 

@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class AvatarHP : MonoBehaviour
 {
-    public int health = 2;
+    public int health = 15;
     public GameObject GameOver;
     public Score scoreforFinal;
     public int FinalScore;
+
+    [SerializeField] private float time;
 
     [SerializeField] TextMeshProUGUI hp;
     [SerializeField] TextMeshProUGUI FinalScoreTEXT;
@@ -17,6 +19,7 @@ public class AvatarHP : MonoBehaviour
     void Start()
     {
         GameOver.SetActive(false);
+        time = 0;
         
     }
 
@@ -42,12 +45,16 @@ public class AvatarHP : MonoBehaviour
         }
 
     }
-    public void Restart()
+
+    private void Update()
     {
-        SceneManager.LoadScene(3);
+        time += 1* Time.deltaTime;
+
+        if(time >= 30)
+        {
+            health += 1;
+            time = 0;
+        }
     }
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+
 }

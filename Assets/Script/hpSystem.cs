@@ -5,12 +5,15 @@ using UnityEngine;
 public class hpSystem : MonoBehaviour
 {
     AvatarHP avhp;
+
+    public bool isUlt;
     
     
     // Start is called before the first frame update
     void Start()
     {
         avhp = GameObject.Find("Canvas").GetComponent<AvatarHP>();
+        isUlt = false;
     }
 
     // Update is called once per frame
@@ -21,17 +24,17 @@ public class hpSystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Fire"))
+        if(other.CompareTag("Fire")&& isUlt == false)
         {
             avhp.health -= 1;
         }
 
-        if (other.CompareTag("Water"))
+        if (other.CompareTag("Water")&&isUlt == false)
         {
             avhp.health -= 1;
         }
 
-        if (other.CompareTag("Grass"))
+        if (other.CompareTag("Grass")&& isUlt == false)
         {
             avhp.health -= 1;
         }
