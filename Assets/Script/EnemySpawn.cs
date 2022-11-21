@@ -48,7 +48,7 @@ public class EnemySpawn : MonoBehaviour
         Enemy2[2] = Enemy333;
 
 
-        StartCoroutine(spawnEnemy(Random.Range(enemyIntervalMin, enemyIntervalMax), Enemy11));
+        StartCoroutine(spawnEnemy( Enemy11));
 
         Invoke("Start2", 2f);
 
@@ -121,25 +121,28 @@ public class EnemySpawn : MonoBehaviour
 
     void Start2()
     {
-        StartCoroutine(spawnEnemy2(Random.Range(enemyIntervalMin1, enemyIntervalMax1), Enemy111));
+        StartCoroutine(spawnEnemy2(Enemy111));
     }
 
     // Update is called once per frame
 
-    private IEnumerator spawnEnemy(float intervel, GameObject enemy)
+    private IEnumerator spawnEnemy(GameObject enemy)
     {
         enemy = Enemy[Random.Range(0, 3)];
+        float intervel = Random.Range(enemyIntervalMin, enemyIntervalMax);
+
         yield return new WaitForSeconds(intervel);
         GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(0, 0.3f), Random.Range(0.15f, 0.4f), Random.Range(3, 3)), Quaternion.identity);
-        StartCoroutine(spawnEnemy(intervel, enemy));
+        StartCoroutine(spawnEnemy(enemy));
     }
 
 
-    private IEnumerator spawnEnemy2(float intervel, GameObject enemy)
+    private IEnumerator spawnEnemy2(GameObject enemy)
     {
         enemy = Enemy[Random.Range(0, 3)];
+        float intervel = Random.Range(enemyIntervalMin1, enemyIntervalMax1);
         yield return new WaitForSeconds(intervel);
         GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-0.3f, 0), Random.Range(0.15f, 0.4f), Random.Range(3, 3)), Quaternion.identity);
-        StartCoroutine(spawnEnemy2(intervel, enemy));
+        StartCoroutine(spawnEnemy2(enemy));
     }
 }
